@@ -83,8 +83,10 @@ public class MeowTimer extends JFrame {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("MeowTimer");
 		frame.setSize(400,300);
+		//frame.pack();
 		frame.setVisible(true);
 		frame.setResizable(false);//can't resize
+		frame.setAlwaysOnTop(true);//display the timer on top of all appss
 		
 		//Event Listener
 		Count listener = new Count(this);
@@ -99,13 +101,14 @@ public class MeowTimer extends JFrame {
 		hour.setFont(font1);
 		minute.setFont(font1);
 		second.setFont(font1);
-		timeDisplay.setFont(font1);
+		timeDisplay.setFont(font2);
 		hourInput.setFont(font2);
 		minuteInput.setFont(font2);
 		secondInput.setFont(font2);
 		start.setFont(font1);
 		pause.setFont(font1);
 		reset.setFont(font1);
+		
 		
 		if(listener.startButton==false) {
 			pause.setEnabled(false);

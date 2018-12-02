@@ -56,11 +56,11 @@ public class Count implements ActionListener, Runnable {
 	}
 
 	//run the timer
-	public void run(){ // <--- Thread.start() 
+	public void run(){ // <--- Thread starts here
 
 		long pastTime = totalTime;
 
-		outer:
+		
 			for(;totalTime>=0; totalTime--){
 				try {
 					if(resetButton){ // if reset button clicked
